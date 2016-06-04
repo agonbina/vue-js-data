@@ -1,0 +1,62 @@
+{
+  "name": "vue-js-data",
+  "description": "js-data bindings for Vue.js",
+  "version": "0.1.0",
+  "author": {
+    "name": "Agon Bina"
+  },
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-espower": "^2.0.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-es2015-rollup": "^1.0.0",
+    "eslint": "^2.8.0",
+    "eslint-config-vue": "^1.0.0",
+    "eslint-loader": "^1.3.0",
+    "istanbul-instrumenter-loader": "^0.1.3",
+    "json-loader": "^0.5.4",
+    "karma": "^0.13.9",
+    "karma-coverage": "^0.5.2",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-sourcemap-loader": "^0.3.5",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.3.4",
+    "mocha-loader": "^0.7.1",
+    "phantomjs": "^1.9.18",
+    "power-assert": "^1.2.0",
+    "rollup": "^0.21.1",
+    "rollup-plugin-babel": "^2.2.0",
+    "rollup-plugin-replace": "^1.1.0",
+    "uglify-js": "^2.6.1",
+    "vue": "^1.0.10",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "files": [
+    "dist/vue-js-data.js",
+    "dist/vue-js-data.min.js",
+    "dist/vue-js-data.common.js",
+    "src"
+  ],
+  "jsnext:main": "src/index.js",
+  "keywords": [
+    "boilerplate",
+    "plugin",
+    "vue",
+    "vuejs",
+    "js-data"
+  ],
+  "license": "MIT",
+  "main": "dist/vue-js-data.common.js",
+  "scripts": {
+    "build": "node config/build.js",
+    "clean": "rm -rf coverage && rm -rf dist",
+    "dev": "webpack-dev-server --quiet --config config/webpack.dev.conf.js --host 0.0.0.0",
+    "lint": "eslint src test config",
+    "test": "npm run lint && npm run unit",
+    "unit": "karma start config/karma.conf.js"
+  }
+}
